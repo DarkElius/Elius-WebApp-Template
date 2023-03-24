@@ -35,7 +35,7 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<ewaf.version>0.0.1-SNAPSHOT</ewaf.version>
 		<log4j.version>2.18.0</log4j.version>
-		<h2.version>2.1.214</h2.version>
+		<derby.version>10.16.1.1</derby.version>
 	</properties>
 
 	<dependencies>
@@ -63,7 +63,7 @@
 		<dependency>
 			<groupId>org.apache.derby</groupId>
 			<artifactId>derby</artifactId>
-			<version>10.16.1.1</version>
+			<version>${derby.version}</version>
 			<scope>runtime</scope>
 		</dependency>
 
