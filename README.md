@@ -76,6 +76,39 @@ This an example of the jdni resource configuration for a in memory database usin
 
 
 
+
+API
+-----
+Below some exmaple about http calls: remember to modify web.xml and your packages in case of changes.
+
+**General**
+
+* Add an object to database
+  
+  *curl -X POST -d '{"name": "foo"}' http://localhost:8080/EliusWebAppTemplate/api/ewa/object/add  --header "Content-Type:application/json"*
+
+* Get all objects from database
+
+  *curl http://localhost:8080/EliusWebAppTemplate/api/ewa/object/all*
+
+
+**Authentications**
+
+Execute calls in the same session
+
+* Login
+
+  *curl -X POST -d '{"userId": "myuser", "password": "mypassword"}' http://localhost:8080/EliusWebAppTemplate/api/auth/login --header "Content-Type:application/json"*
+
+* Login, get logged user info
+
+  *curl http://localhost:8080/EliusWebAppTemplate/api/auth/get*
+
+* Logout
+
+  *curl http://localhost:8080/EliusWebAppTemplate/api/auth/logout*
+
+
 ### License
 
 Apache 2.0 - <https://www.apache.org/licenses/LICENSE-2.0>
