@@ -98,11 +98,11 @@ Execute calls in the same session
 
 * Login
 
-  *curl -X POST -d '{"userId": "myuser", "password": "mypassword"}' http://localhost:8080/EliusWebAppTemplate/api/auth/login --header "Content-Type:application/json"*
+  *curl -X POST -d '{"userId": "myuser", "password": "mypassword"}' http://localhost:8080/EliusWebAppTemplate/api/auth --header "Content-Type:application/json"*
 
 * Login, get logged user info
 
-  *curl http://localhost:8080/EliusWebAppTemplate/api/auth/get*
+  *curl http://localhost:8080/EliusWebAppTemplate/api/auth*
 
 * Logout
 
