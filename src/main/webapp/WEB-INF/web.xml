@@ -14,7 +14,7 @@
 	</welcome-file-list>
 
 
-	<!-- AuthenticationFilter -->
+	<!-- Authentication Filter -->
 	<filter>
 		<filter-name>AuthenticationFilter</filter-name>
 		<filter-class>elius.webapp.framework.security.authentication.AuthenticationFilter</filter-class>
@@ -23,6 +23,19 @@
 		<filter-name>AuthenticationFilter</filter-name>
 		<url-pattern>/api/ewa-DISABLED/*</url-pattern>
 	</filter-mapping>
+	
+
+	<!-- Static Resource Filter -->
+	<!-- Example
+	<filter>
+		<filter-name>StaticResourceFilter</filter-name>
+		<filter-class>elius.webapp.framework.security.SecurityRedirectFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>StaticResourceFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	 -->
 	
 	
 	<!-- Jersey Web Application Servlet Endpoint -->
