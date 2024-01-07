@@ -85,11 +85,11 @@ Below some exmaple about http calls: remember to modify web.xml and your package
 
 * Add an object to database
   
-  *curl -X POST -d '{"name": "foo"}' http://localhost:8080/EliusWebAppTemplate/api/ewa/object/add  --header "Content-Type:application/json"*
+  *curl -X PUT -d '{"name": "foo"}' http://localhost:8080/EliusWebAppTemplate/api/ewa/object  --header "Content-Type:application/json"*
 
 * Get all objects from database
 
-  *curl http://localhost:8080/EliusWebAppTemplate/api/ewa/object/all*
+  *curl http://localhost:8080/EliusWebAppTemplate/api/ewa/object*
 
 
 **Authentications**

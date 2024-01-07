@@ -30,7 +30,7 @@ import elius.webapp.template.myobj.MyObject;
 
 import jakarta.ws.rs.Consumes;
 import jakarta.ws.rs.GET;
-import jakarta.ws.rs.POST;
+import jakarta.ws.rs.PUT;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.Application;
@@ -54,8 +54,7 @@ public class ObjectInterface extends Application {
 		dbObject = new MyObjDatabase();
 	}
 	
-	@POST
-	@Path("add")
+	@PUT
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response add(MyObject myObj) {
@@ -80,7 +79,6 @@ public class ObjectInterface extends Application {
 	
 	
 	@GET
-	@Path("all")
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response getAll() {
 		
