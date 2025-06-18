@@ -26,6 +26,7 @@ import org.apache.logging.log4j.Logger;
 import elius.webapp.template.TemplateAttributes;
 import elius.webapp.framework.db.DBManager;
 import elius.webapp.framework.properties.PropertiesManager;
+import elius.webapp.framework.properties.PropertiesManagerFactory;
 
 public class DBTables {
 	// Get Logger
@@ -55,7 +56,7 @@ public class DBTables {
 	 */
 	public DBTables() {
 		// Application properties
-		appProperties = new PropertiesManager();
+		appProperties = PropertiesManagerFactory.getInstance(TemplateAttributes.TEMPLATE_PROPERTIES_FILE);
 	}
 	
 	
@@ -68,7 +69,7 @@ public class DBTables {
 		logger.debug("Database initialization");
 		
 		// Load default properties
-		if(0 != appProperties.load(TemplateAttributes.TEMPLATE_PROPERTIES_FILE)) {
+		if(!appProperties.isLoaded()) {
 			// Return error
 			return 1;
 		}

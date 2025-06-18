@@ -25,6 +25,7 @@ import org.apache.logging.log4j.Logger;
 
 import elius.webapp.template.db.DBTables;
 import elius.webapp.framework.properties.PropertiesManager;
+import elius.webapp.framework.properties.PropertiesManagerFactory;
 
 public class TemplateService {
 	
@@ -49,10 +50,7 @@ public class TemplateService {
 		initialized = true;
 		
 		// Application properties
-		appProperties = new PropertiesManager();
-		
-		// Load default properties
-		appProperties.load(TemplateAttributes.TEMPLATE_PROPERTIES_FILE);
+		appProperties = PropertiesManagerFactory.getInstance(TemplateAttributes.TEMPLATE_PROPERTIES_FILE);
 		
 		// Initialize database (drop/create) if required
 		if("Y".equalsIgnoreCase(appProperties.get(TemplateAttributes.PROP_DATABASE_INIT_ON_BOOT))) {
