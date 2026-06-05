@@ -19,8 +19,8 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.8.1</version>
 				<configuration>
-					<source>11</source>
-					<target>11</target>
+					<source>21</source>
+					<target>21</target>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -34,7 +34,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<ewaf.version>0.0.1-SNAPSHOT</ewaf.version>
-		<log4j.version>2.18.0</log4j.version>
+		<log4j.version>2.26.0</log4j.version>
 		<derby.version>10.16.1.1</derby.version>
 		<jakarta.version>6.0.0</jakarta.version>
 	</properties>
