@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>EliusWebAppTemplate</groupId>
 	<artifactId>EliusWebAppTemplate</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<packaging>war</packaging>
 	<description>Elius WebApp Template</description>
 	<build>
@@ -32,7 +32,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<ewaf.version>0.0.1-SNAPSHOT</ewaf.version>
+		<ewaf.version>0.0.1</ewaf.version>
 		<log4j.version>2.26.0</log4j.version>
 		<derby.version>10.16.1.1</derby.version>
 		<jakarta.version>6.0.0</jakarta.version>
@@ -44,7 +44,7 @@
 		<dependency>
 			<groupId>EliusWebAppFramework</groupId>
 			<artifactId>EliusWebAppFramework</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<version>${ewaf.version}</version>
 		</dependency>
 
 		<!-- Logging -->
